@@ -1,0 +1,12 @@
+<h1> welcome to MMU </h1>
+<p> Answer is {{ answer }} </p>
+
+<form method="POST">{% csrf_token %}
+    {{form}}
+    <input type="submit" name="Submit"/>
+</form>
+{% for post in recent_posts_list %}
+  {{post.title}}
+  {{post.author}}
+  <hr>
+{% endfor %}
