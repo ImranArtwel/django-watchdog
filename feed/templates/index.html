@@ -1,6 +1,6 @@
-<h1> welcome to MMU </h1>
-<p> Answer is {{ answer }} </p>
-
+Hello,
+{{user.first_name}}
+<br><a href="{% url 'feed:logout_view'%}">Logout</a>
 <form method="POST">{% csrf_token %}
     {{form}}
     <input type="submit" name="Submit"/>
